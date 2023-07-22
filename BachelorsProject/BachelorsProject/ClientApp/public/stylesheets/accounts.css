@@ -1,0 +1,5 @@
+#accounts-wrapper h1 {
+  font-size: calc(2rem + 1vw);
+  transform: translateX(-0.35vw);
+  text-shadow: calc(0.35vw + 6px) calc(-0.35vw - 6px) 10px rgb(221, 214, 164);
+}

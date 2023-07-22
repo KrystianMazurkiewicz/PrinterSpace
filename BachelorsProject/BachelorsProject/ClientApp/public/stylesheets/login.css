@@ -1,0 +1,144 @@
+.login-body h1,
+.login-body input,
+.login-body button {
+  all: unset;
+}
+
+.svg-container-horizontal-1 {
+  margin-bottom: calc(1vw + 1vh);
+  height: auto;
+  width: calc(10vw + 150px);
+  width: 100%;
+  z-index: 2;
+}
+.svg-container-horizontal-1 svg {
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4))
+    drop-shadow(0 0 50px rgba(0, 0, 0, 0.4));
+}
+
+.login-body {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(246, 255, 0);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  background-image: url("https://www.oslomet.no/var/oslomet/storage/images/0/0/4/2/292400-2-nor-NO/OsloMet-Makerspace-2400x1200px-CC2CA1A7-6242-47BF-8985-E2F79105985B_1_105_c.jpg");
+}
+
+.login-body::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #005bea;
+  background: -webkit-linear-gradient(bottom, #d9a300, #ffee60);
+  background: -o-linear-gradient(bottom, #d9a300, #ffee60);
+  background: -moz-linear-gradient(bottom, #d9a300, #ffee60);
+  background: linear-gradient(bottom, #d9a300, #ffee60);
+  opacity: 0.9;
+}
+
+.login-body .login-body__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+  height: fit-content;
+  margin-top: 14vh;
+  max-width: 90vw;
+}
+
+.login-body .login-body__title {
+  font-weight: 600;
+  font-size: calc(1vw + 1.5rem);
+}
+
+.login-body .login-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  width: 400px;
+  width: calc(200px + 10vw);
+  gap: 30px;
+}
+
+.login-body .login-form > * {
+  width: 100%;
+}
+
+.login-body .login-form__label {
+  display: none;
+}
+
+.login-body .login-form__input {
+  font-size: calc(0.8rem + 0.35vw);
+  line-height: 1.2;
+  color: #333;
+  display: block;
+  width: 100%;
+  background: #fff;
+  border-radius: var(--border-radius);
+  padding: 18px 25px;
+}
+
+/* .login-body .login-form__input:hover,
+.login-body .login-form__input:focus {
+  border: none;
+} */
+
+.login-body .login-form__submit {
+  font-size: calc(0.8rem + 0.35vw);
+  line-height: 1.5;
+  color: #e0e0e0;
+  width: 100%;
+  border-radius: var(--border-radius);
+  background-color: rgb(74, 88, 218);
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4))
+    drop-shadow(0 0 50px rgba(0, 0, 0, 0.4));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 25px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  z-index: 1;
+  transition: all 300ms;
+}
+
+.login-body .login-form__submit:hover {
+  background-color: rgb(36, 51, 189);
+}
+
+.successful-login-message {
+  padding: calc(20px + 1vw);
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+}
+
+.successful-login-message h1 {
+  font-size: calc(1rem + 0.5vw);
+  font-weight: 600;
+}
+
+.successful-login-message p {
+  font-size: calc(0.6rem + 0.4vw);
+}

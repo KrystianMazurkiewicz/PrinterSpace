@@ -1,0 +1,64 @@
+h2.printer-history {
+  text-align: left;
+  width: 100%;
+  font-weight: bold !important;
+}
+
+table {
+  width: 100%;
+  max-height: calc(200px + 60vh);
+  overflow-y: scroll;
+  border-radius: var(--border-radius);
+  /* border: 2px solid var(--border-color); */
+  border: 2px solid;
+}
+
+caption {
+  text-align: left;
+}
+
+tbody {
+  max-height: 40vh;
+  display: block;
+  overflow-y: auto;
+}
+
+tr {
+  position: relative;
+  display: block;
+}
+
+tr::before {
+  content: "";
+  position: absolute;
+  width: 96%;
+  height: 1px;
+  background-color: black;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+td {
+  display: block;
+  padding: 0 1rem;
+  font-weight: 900 !important;
+}
+
+td:first-child {
+  padding-top: 1rem;
+}
+
+td:last-child {
+  padding-bottom: 1rem;
+}
+
+td::before {
+  content: attr(data-cell) ": ";
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+tr:last-child::before {
+  width: 0;
+}

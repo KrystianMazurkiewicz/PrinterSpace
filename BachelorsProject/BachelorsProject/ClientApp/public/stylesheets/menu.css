@@ -1,0 +1,135 @@
+body {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  position: absolute;
+  top: calc(1.5vw + 20px);
+  left: calc(2.5vw + 2px);
+}
+
+.logo svg {
+  height: calc(2rem + 3vw);
+}
+
+@media screen and (max-width: 1000px) {
+  .logo {
+    position: absolute;
+    top: calc(1.5vw + 20px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+#menu {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  transition: background-position 500ms linear;
+}
+
+#menu-items {
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(1.5vw + 20px);
+  flex-direction: column;
+}
+
+#menu[data-active-index="0"] > #menu-background-pattern {
+  background-position: 0% -25%;
+}
+
+#menu[data-active-index="1"] > #menu-background-pattern {
+  background-position: 0% -50%;
+}
+
+#menu[data-active-index="2"] > #menu-background-pattern {
+  background-position: 0% -75%;
+}
+
+#menu[data-active-index="3"] > #menu-background-pattern {
+  background-position: 0% -100%;
+}
+
+#menu[data-active-index="4"] > #menu-background-pattern {
+  background-position: 0% -125%;
+}
+
+#menu[data-active-index="0"] > #menu-background-image {
+  background-position: center 45%;
+}
+
+#menu[data-active-index="1"] > #menu-background-image {
+  background-position: center 50%;
+}
+
+#menu[data-active-index="2"] > #menu-background-image {
+  background-position: center 55%;
+}
+
+#menu[data-active-index="3"] > #menu-background-image {
+  background-position: center 60%;
+}
+
+#menu[data-active-index="4"] > #menu-background-image {
+  background-position: center 65%;
+}
+
+#menu-background-pattern {
+  background-image: radial-gradient(rgba(99, 99, 99, 0.1) 5%, transparent 5%);
+  background-position: 0% -25%;
+  background-size: 12vmin 12vmin;
+  height: 100vh;
+  position: absolute;
+  transition: 800ms ease;
+  width: 100vw;
+  z-index: 1;
+}
+
+#menu-background-image {
+  background-image: url("../images/3d-printer.png");
+  background-position: center 45%;
+  background-size: 120vmax;
+  height: 100%;
+  opacity: 0.1;
+  position: absolute;
+  transition: 800ms ease;
+  width: 100vw;
+  z-index: 0;
+}
+
+#menu-items:hover ~ #menu-background-pattern {
+  background-size: 11vmin 11vmin;
+  opacity: 0.5;
+}
+
+#menu-items:hover ~ #menu-background-image {
+  background-size: 150vmax;
+  opacity: 0.1;
+}
+
+#menu-items:hover > .menu-item {
+  opacity: 0.3;
+}
+
+#menu-items:hover > .menu-item:hover {
+  opacity: 1;
+}
+
+.menu-item {
+  text-align: center;
+  cursor: pointer;
+  display: block;
+  font-size: calc(2rem + 2.5vw);
+  text-decoration: none;
+  transition: opacity 400ms ease;
+  text-transform: capitalize;
+}

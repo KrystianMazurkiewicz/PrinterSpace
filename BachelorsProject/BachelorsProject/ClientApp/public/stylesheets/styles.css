@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+:root {
+  --red: #d32e2e;
+  --blue: #4997bb;
+  --green: rgb(124, 179, 81);
+  --orange: #ea7f3c;
+  --dark-grey: #232323;
+  --kings-blue: #809dd3;
+  --dark-purple: #242227;
+  --light-orange: #efd1b5;
+  --light-yellow: #f4f0d1;
+  --lighter-yellow: #f2efdd;
+
+  --oslomet-red: rgb(224, 45, 0);
+  --oslomet-black: rgb(0, 0, 0);
+  --oslomet-blue: rgb(0, 122, 204);
+  --oslomet-aqua: rgb(64, 228, 255);
+  --oslomet-orange: rgb(255, 129, 0);
+  --oslomet-yellow: rgb(255, 220, 0);
+  --oslomet-dark-red: rgb(153, 0, 43);
+  --oslomet-dark-blue: rgb(0, 0, 100);
+
+  --font-color: rgb(64, 64, 64);
+  --focus-color: rgb(0, 136, 255);
+  --hover-color: rgb(230, 223, 175);
+  --border-color: rgba(36, 34, 39, 0.2);
+  --background-color: #f4f0d1;
+
+  --gap: calc(10px + 0.2vw);
+  --border-radius: 10px;
+  --normal-font-size: calc(0.8rem + 0.5vw);
+
+  --close-footer-button-size: 80px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Questrial", sans-serif;
+  font-family: "Ariel", sans-serif;
+  margin: 0;
+  color: rgb(35, 35, 35);
+  color: var(--oslomet-black);
+  color: var(--dark-grey);
+  overflow-wrap: anywhere;
+}
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; 
+}*/
+
+*:focus {
+  outline: 4px solid var(--oslomet-blue) !important;
+}
+
+body {
+  background-color: var(--background-color);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.unset {
+  all: unset;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+}
+
+label {
+  width: fit-content;
+}
+
+strong {
+  font-weight: bold !important;
+}
+
+.button,
+input {
+  border: none;
+  outline: 1px solid var(--dark-grey);
+  padding: calc(var(--normal-font-size) - 0.2vw) var(--normal-font-size);
+  font-size: calc(0.8rem + 0.35vw);
+  border-radius: var(--border-radius);
+}
+
+.button {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  min-width: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.danger-color {
+  background-color: var(--oslomet-red);
+  color: white;
+}
+
+.danger-color:hover {
+  background-color: var(--oslomet-dark-red);
+}
+
+.success-color {
+  background-color: var(--green);
+  background-color: var(--oslomet-blue);
+  color: white;
+}
+
+.success-color:hover {
+  background-color: rgb(96, 140, 63);
+  background-color: rgb(0, 90, 170);
+}
+
+.success-color:focus {
+  outline-color: var(--oslomet-red) !important;
+}
+
+.update-color {
+  background-color: var(--oslomet-blue);
+  color: white;
+}
+
+.update-color:hover {
+  background-color: rgb(0, 90, 170);
+}
+
+.update-color:focus {
+  outline-color: var(--oslomet-red) !important;
+}
+
+.read-color {
+  background-color: var(--oslomet-yellow);
+}
+
+.read-color:hover {
+  background-color: rgb(255, 241, 149);
+}
+
+.margin-right {
+  margin-right: var(--gap);
+}
+
+.margin-top {
+  margin-top: var(--gap);
+}
+
+.cursor-default {
+  cursor: default !important;
+}
+
+.upload-gcode-file-label {
+  width: 100% !important;
+  cursor: pointer !important;
+}
+
+#upload-gcode-file-input {
+  display: none;
+}
+
+.hover_underline:hover {
+  text-decoration: underline;
+}
+
+.bold {
+  font-weight: bold !important;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+/* for the stream */
+
+.stream {
+  width: 100%;
+  background-color: red;
+}
+
+.watch-live {
+  color: red;
+}
+
+.watch-live:hover {
+  text-decoration: underline;
+}
+
+.button-container {
+  margin-top: var(--gap);
+}
+
+.button-container > button {
+  margin-right: var(--gap);
+}

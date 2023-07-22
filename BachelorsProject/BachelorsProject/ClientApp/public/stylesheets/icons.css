@@ -1,0 +1,38 @@
+.plus-inside-circle-icon {
+  width: calc(1vw + 30px);
+  height: calc(1vw + 30px);
+  margin-right: 10px;
+}
+
+.plus-inside-circle-icon:hover {
+  fill: grey;
+}
+
+.home-icon {
+  width: calc(2vw + 20px);
+  height: calc(2vw + 20px);
+  fill: #000000;
+}
+
+.home-icon:hover {
+  fill: rgb(79, 79, 79);
+}
+
+.expand-arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 100%;
+  margin: 0 6px 0 0;
+}
+
+.expand-arrow {
+  transform: rotate(-90deg);
+  display: block;
+  margin: auto;
+  width: calc(0.5vw + 10px);
+  height: calc(0.5vw + 10px);
+  transform-origin: center;
+  transition: 200ms;
+}

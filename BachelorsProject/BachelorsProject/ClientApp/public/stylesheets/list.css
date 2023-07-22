@@ -1,0 +1,124 @@
+.page-wrapper {
+  padding: calc(1.5vw + 20px) calc(2.5vw + 2px);
+  width: 100%;
+}
+
+h1 {
+  font-size: calc(2rem + 3vw);
+  transform: translateX(-0.35vw);
+  text-shadow: calc(0.35vw + 6px) calc(-0.35vw - 6px) 10px rgb(221, 214, 164);
+}
+
+.list-header {
+  position: relative;
+}
+
+.list-header__nav {
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  display: flex;
+  gap: calc(10px + 0.5vw);
+}
+
+.list-header__nav__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: var(--normal-font-size);
+  cursor: pointer;
+}
+
+.list-header__nav__item:hover p,
+.list-header__nav__item:focus p {
+  text-decoration: underline;
+}
+
+.list {
+  padding-top: 20px;
+  padding-top: 50px;
+  width: 100%;
+}
+
+.list * {
+  font-size: var(--normal-font-size);
+  font-weight: 300;
+}
+
+.list > * {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.list > *:nth-child(1) {
+  border-top: 1px solid var(--border-color);
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  cursor: pointer;
+  width: 100%;
+  padding: calc(1vw + 20px) 20px;
+  padding: calc(1vw) 20px;
+}
+
+.list-item:hover,
+.list-item:focus {
+  background-color: var(--hover-color);
+}
+
+.item-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.file-name {
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.expanded-info {
+  border-radius: var(--border-radius);
+  width: 100%;
+  cursor: default;
+  display: none;
+  padding: calc(0.5vw + 10px);
+  padding: calc(var(--gap) * 2);
+  background-color: var(--lighter-yellow);
+  border: 1px solid var(--border-color);
+  margin-top: calc(1vw + 20px);
+  flex-direction: column;
+}
+
+.expanded-info.visible {
+  display: flex;
+}
+
+.expanded-info * {
+  font-size: calc(var(--normal-font-size) - 0.2rem);
+}
+
+.expanded-info > p {
+  cursor: text;
+  margin-bottom: var(--gap);
+}
+
+.expanded-info > * {
+  font-weight: 500;
+}
+
+.expanded-info > * > span {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 450px) {
+  .printer-status {
+    display: none;
+  }
+}
